@@ -1,0 +1,23 @@
+<section>
+<header>
+  <h4> Bienvenido rl</h4>
+  <div>
+    <strong>Nueva reposición</strong>
+    <form>
+      <div>
+        <label for="product">Producto</label>
+        <select #product>
+          <option *ngFor="let p of products" [value]="p.id">{{p.name}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="quantity">Cantidad</label>
+        <input type="number" step="1" value="1" #quantity>
+      </div>
+      <div>
+        <button type="button" (click)="registerOrder(product.value, quantity.value)">Generara reposcicion</button>
+      </div>
+    </form>
+  </div>
+</header>
+</section>

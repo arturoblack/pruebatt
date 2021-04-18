@@ -1,0 +1,39 @@
+<section>
+  <header><h4>Ordenes de reposición pendientes:</h4></header>
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Producto</th>
+          <th>estado</th>
+          <th>Cantidad</th>
+          <th colspan="2">Asignar a :</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{order.id}}</td>
+          <td>{{productById(order.productId).name}}</td>
+          <td>
+            <span *ngIf="order.state === 'INITIAL'">
+              Pendiente
+            </span>
+            <span *ngIf="order.state === 'ASSIGNED'">
+              Asginaddo a {{rlById(order.assignedTo).name}}
+            </span>
+          </td>
+          <td>{{order.quantity}}</td>
+          <td>
+            <select name="rls" id="" #person>
+              <option *ngFor="let p of rls" [value]="p.id">{{p.name}}</option>
+            </select>
+          </td>
+          <td>
+            <button (click)="assign(order.id, person.value)"> asignar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+{
+  "name": "repo",
+  "version": "1.0.0",
+  "description": "Ordenes de reposicion",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init-data": "node scripts/createSchema.js   && node scripts/insertDemoData.js "
+  },
+  "author": "Ivan Arturo",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "sequelize": "^6.6.2",
+    "sqlite3": "^5.0.2"
+  }
+}
