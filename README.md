@@ -42,7 +42,7 @@ imironman@avenger.org: 1234
 
 ### Diagrama de clases
 
-![Diagrama de clases](doc/diagramaDeActividades-AsignacionDeOrden.png)
+![Diagrama de clases](doc/DiagramaDeClases.png)
 
 ### Open Api Specificatron
 
